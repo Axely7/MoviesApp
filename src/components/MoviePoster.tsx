@@ -1,19 +1,29 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {Movie} from '../interfaces/movieInterface';
 
 interface Props {
   movie: Movie;
+  height?: number;
+  width?: number;
+  marginTop?: number;
 }
 
-export const MoviePoster = ({movie}: Props) => {
+export const MoviePoster = ({
+  movie,
+  height = 420,
+  width = 300,
+  marginTop,
+}: Props) => {
   const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
   return (
     <View
       style={{
-        width: 300,
-        height: 420,
+        width,
+        height,
+        marginTop,
+        marginHorizontal: 6,
       }}>
       <View style={styles.imageContainer}>
         <Image
