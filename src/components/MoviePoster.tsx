@@ -28,7 +28,9 @@ export const MoviePoster = ({
         width,
         height,
         marginTop,
-        marginHorizontal: 6,
+        marginHorizontal: 2,
+        paddingBottom: 20,
+        paddingHorizontal: 7,
       }}>
       <View style={styles.imageContainer}>
         <Image
