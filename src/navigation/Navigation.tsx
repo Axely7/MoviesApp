@@ -16,11 +16,15 @@ export const Navigation = () => {
       screenOptions={{
         headerShown: false,
         cardStyle: {
-          backgroundColor: 'white',
+          // backgroundColor: 'white',
         },
       }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="DetailScreen" component={DetailScreen} />
+      <Stack.Screen
+        name="DetailScreen"
+        // options={{cardStyle: {backgroundColor: 'red'}}}
+        component={DetailScreen}
+      />
     </Stack.Navigator>
   );
 };
